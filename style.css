@@ -1,0 +1,254 @@
+/*==============GameArea==============*/
+canvas {
+	border: 1px solid #d3d3d3;
+	background-color: #f1f1f1;
+}
+body{
+	margin:0px;
+	background-image:url("images/bg.jpg");
+
+}
+/*================Header/Title=============*/
+	
+header{	
+	float:left;
+	background-color:rgb(38,79,167);
+	height:130px;
+	width:65.80%;	
+	margin-bottom:0px;
+}
+h1{	
+	color:rgb(128,128,128);
+	font-family:Georgia ,serif;
+	font-size:50px;
+	margin-left:170px;
+	margin-top:50px;
+}
+img{
+	margin-left:50px;
+	float:left;
+	height: 100px;
+	width: 100px;
+	margin-top:20px;
+}
+/*==========Social Media nav===============*/
+nav{
+	float:right;
+	background-color:rgb(38,79,167);
+	color:blue;
+	height:130px;
+	width:34.2%;
+}
+.logo{
+	margin-top:40px;
+	border-radius:10px;
+	width:40px;
+	height:40px;
+}
+li{	
+	display:inline;
+	text-decoration:none;
+}
+/*==============2ndNav==============*/
+.nav1{	
+	text-align:center;
+	border:solid 1px black;
+	background-color:gray;
+	width:100%;
+}
+.nav2{	
+	text-decoration:none;
+	font-size:30px;
+	font-family:Arial;
+	margin-left:70px;
+	margin-right:70px;
+	color:rgb(38,79,167)
+}
+.nav1 a:hover {
+    	background-color: #DDD;
+    	color: black;
+	padding-top:1px;
+}
+.active {
+    color: white;
+}
+marquee{
+	font-family:Arial;
+	height:40px;
+	background-color:black;
+	color:white;
+	font-size:20px;
+}
+/*==============Footer===========*/
+footer{
+	border-top:solid 10px black;
+	border-bottom:solid 10px black;
+	font-family:Arial;
+	background-color:rgb(4,14,75)
+}
+p{	
+	font-size:10px;
+	color:white;
+	text-align:center;
+	
+}
+/*==========FirstpageUI=========*/
+.container{
+	border:solid 3px black;
+	width:400px
+	height:500px;
+	margin-top:50px;
+	margin-left:300px;
+	margin-right:300px;
+	margin-bottom:70px;
+	background-color:rgb(1,75,225);
+}
+.hometext{
+	padding-top:20px;
+	padding-bottom:20px;
+	background-color:rgb(0,138,226);
+	border:solid 1px black;
+}
+.Home{
+	width:300px;
+	height:300px;
+	margin-left:300px;
+	margin-right:300px;
+}
+.text{
+	margin-left:130px;
+	color:rgb(4,14,75);
+}
+.logo1{
+	width:250px;
+	height:250px;
+	margin-left:-60px;
+	margin-top:20px;
+}
+.button{
+	font-size:30px;
+	text-align:center;
+	background-color:rgb(0,138,226);
+	border:solid 1px black;
+}
+.button1{
+	font-family:Arial;
+	text-decoration:none;
+	color:rgb(9,16,36);
+}
+.button1:hover{
+	color:blue;
+	
+}
+.button:hover{
+	background-color:green;
+}
+/*======2ndpageResponsiveUI=======*/s
+@media screen and (max-width:1172px){
+	header{width:65.80%;height:120px;}
+	nav{width:34.2%;height:120px;}
+	h1{font-size:35px;}
+	img{width:80px;height:80px;}
+	.logo{width:25px;height:25px;border-radius:7px;margin-left:20px;margin-right:20px;}
+}
+@media screen and (max-width:880px){
+	header{width:65.80%;height:110px;}
+	nav{width:34.2%;height:110px;}
+	h1{font-size:30px;}
+	.nav2{font-size:25px;}
+	img{width:70px;height:70px;}
+	.logo{width:20px;height:20px;border-radius:5px;margin-left:10px;margin-right:10px;}
+}
+@media screen and (max-width:700px){
+	header{width:65.80%;height:100px;}
+	nav{width:34.2%;height:100px;}
+	h1{font-size:25px;}
+	img{width:60px;height:60px;}
+	.logo{width:15px;height:15px;border-radius:3px;margin-left:10px;margin-right:10px;}
+	.nav2{font-size:17px;margin-left:20px;margin-right:20px;}
+	marquee{font-size:10px;height:20px;}
+}
+@media screen and (max-width:540px){
+	header{width:65.80%;height:90px;}
+	nav{width:34.2%;height:90px;}
+	h1{font-size:20px;margin-left:100px;margin-top:35px;}
+	img{width:50px;height:50px;}
+	.logo{width:12px;height:12px;border-radus:2px;margin-left:7px;margin-right:7px;}
+	.nav2{font-size:14px;margin-left:17px;margin-right:17px;}
+	marquee{font-size:10px;height:20px;}
+}
+@media screen and (max-width:430px){
+	header{width:65.80%;height:90px;}
+	nav{width:34.2%;height:90px;}
+	h1{font-size:13px;margin-left:100px;margin-top:35px;}
+	img{width:50px;height:50px;}
+	.logo{width:12px;height:12px;border-radius:2px;margin-left:7px;margin-right:7px;margin-top:10px;}
+	.nav2{font-size:14px;margin-left:17px;margin-right:17px;}
+	marquee{font-size:10px;height:20px;}
+	canvas{width:100%;height:200px;}
+}
+
+/*======FirtspageResponsiveUI=======*/
+@media screen and (max-width:1300px){
+	.container{width:600px;}
+	.text{margin-left:90px;}
+	.logo1{width:220px;height:220px;margin-left:-110px;margin-top:30px;}
+}
+@media screen and (max-width:1200px){
+	.container{margin-left:250px;}
+	.text{font-size:40px;}
+}
+@media screen and (max-width:1100px){
+	.container{margin-left:200px;}
+}
+@media screen and (max-width:1000px){
+	.hometext{height:40px;}
+	.text{margin-top:0px;font-size:40px;}
+	.container{margin-left:170px;}
+	.logo1{width:200px;height:200px;margin-bottom:-5px;}
+}
+@media screen and (max-width:900px){
+	.container{margin-left:150px;}
+}
+@media screen and (max-width:800px){
+	.container{margin-left:110px;}	
+}
+@media screen and (max-width:700px){
+	.container{margin-left:50px;}
+}
+@media screen and (max-width:646px){
+	.container{width:500px;height:450px;margin-left:30px;}
+	.text{font-size:35px;}
+	.logo1{width:180px;height:180px;margin-left:-140px;margin-bottom:0px;}
+	 #but{margin-top:-48px;}
+}
+@media screen and (max-width:528px){
+	.container{width:400px;height:415px;margin-left:30px;}
+	.text{font-size:30px;margin-left:50px;}
+	.logo1{width:160px;height:160px;margin-left:-180px;margin-bottom:0px;}
+	#but{margin-top:-48px;}
+	.button{font-size:20px;}
+}
+@media screen and (max-width:436px){
+	.container{width:350px;height:390px;margin-left:20px;}
+	.text{font-size:25px;}
+	.logo1{width:150px;height:150px;margin-left:-200px;margin-bottom:0px;}
+	#but{margin-top:-72px;}
+	.button{font-size:20px;}
+}
+@media screen and (max-width:378px){
+	.container{width:300px;height:390px;margin-left:30px;}
+	.text{font-size:25px;margin-left:25px;}
+	.logo1{width:150px;height:150px;margin-left:-230px;margin-bottom:0px;}
+	#but{margin-top:-72px;}
+	.button{font-size:20px;}
+}
+@media screen and (max-width:342px){
+	.container{width:250px;height:390px;margin-left:25px;}
+	.text{font-size:20px;}
+	.logo1{width:150px;height:150px;margin-left:-250px;margin-bottom:0px;}
+	#but{margin-top:-72px;}
+	.button{font-size:20px;}
+}
+
+

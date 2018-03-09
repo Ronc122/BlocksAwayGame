@@ -178,14 +178,16 @@ p{
 	marquee{font-size:10px;height:20px;}
 }
 @media screen and (max-width:430px){
-	header{width:65.80%;height:90px;}
-	nav{width:34.2%;height:90px;}
+	header{width:65.80%;height:80px;}
+	nav{width:34.2%;height:80px;}
 	h1{font-size:13px;margin-left:100px;margin-top:35px;}
 	img{width:50px;height:50px;}
 	.logo{width:12px;height:12px;border-radius:2px;margin-left:7px;margin-right:7px;margin-top:10px;}
 	.nav2{font-size:14px;margin-left:17px;margin-right:17px;}
 	marquee{font-size:10px;height:20px;}
-	canvas{width:100%;height:200px;}
+	canvas{width:100%;height:300px;}
+	#frame{height:301px;}
+	
 }
 
 /*======FirtspageResponsiveUI=======*/

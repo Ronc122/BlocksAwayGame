@@ -3,9 +3,10 @@ The Game is Flappy Bird inspired but theirs a difference,the Gamepiece(Blocks) d
 
 
 The Game has 3 game option: 
-Easy
-Normal
-Hard 
+<ul>
+  <li>Easy</li>
+  <li>Normal</li>
+  <li>Hard</li> 
 
 The Game is full of obstacles. 
 There's only one rule; never get hit with a series of Obstacles.

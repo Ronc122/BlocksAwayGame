@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>BlocksAway</title>
+		<link rel="icon" type="image/png" href=images/logo.png />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="stylesheet" href="style.css" type="text/css" />
 	</head>
@@ -14,7 +16,7 @@
 			var myMusic;
 			var canvas;
 			var score = 0;
-
+			// Game Start Here :
 			function startGame() {
 				GamePiece = new component(40, 40, "blue", 10, 160);
 				myBackground = new component(1355, 440, "images/index1.jpg", 0, 0, "image");
@@ -24,31 +26,31 @@
 				myMusic.play();
 				GameArea.start();
 			}
-
+			// My Game Area:
 			var GameArea = {
 				canvas : document.createElement("canvas"),
 				start : function() {
-				this.canvas.width = window.innerWidth;
-				this.canvas.height = 380;
-				this.context = this.canvas.getContext("2d");
-				document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-				this.frameNo = 0;
-				this.interval = setInterval(updateGameArea, 20);
-				window.addEventListener('keydown', function (e) {
-					GameArea.key = e.keyCode;
-				})
-				window.addEventListener('keyup', function (e) {
-				GameArea.key = false;
-				})
-			},
+					this.canvas.width = window.innerWidth;
+					this.canvas.height = 379;
+					this.context = this.canvas.getContext("2d");
+					document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+					this.frameNo = 0;
+					this.interval = setInterval(updateGameArea, 20);
+					window.addEventListener('keydown', function (e) {
+						GameArea.key = e.keyCode;
+					})
+						window.addEventListener('keyup', function (e) {
+						GameArea.key = false;
+					})
+					},
 				clear : function() {
-				this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+					this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 				},
 				stop : function() {
 					clearInterval(this.interval);
 				}
 			}
-
+			// Creating an Object:
 			function component(width, height, color, x, y, type) {
 				this.type = type;
 				if (type == "image") {
@@ -63,11 +65,11 @@
 				this.y = y;
 				this.update = function() {
 					ctx = GameArea.context;
-					if (this.type == "text") {
+					if (this.type == "text") { // creating score here
 						ctx.font = this.width + " " + this.height;
 						ctx.fillStyle = color;
 						ctx.fillText(this.text, this.x, this.y);
-					}else if (type == "image") {
+					}else if (type == "image") { // background image
 						  ctx.drawImage(this.image,
 							this.x,
 							this.y,
@@ -81,6 +83,7 @@
 					this.x += this.speedX;
 					this.y += this.speedY;
 				}
+				// Controlling the Gamepiece:
 				this.crashWith = function(otherobj) {
 					var myleft = this.x;
 					var myright = this.x + (this.width);
@@ -97,10 +100,11 @@
 					return crash;
 				}
 			}
-
+			
 			function updateGameArea() {
 				var x, height, gap, minHeight, maxHeight, minGap, maxGap;
 				for (i = 0; i < Obstacles.length; i += 1) {
+					// When Gamepiece hit the Obstacles:
 					if (GamePiece.crashWith(Obstacles[i])) {
 						mySound.play();
 						alert("CRASH");
@@ -112,6 +116,7 @@
 				myBackground.newPos();
 				myBackground.update();
 				GameArea.frameNo += 1;
+				// Creating Random Obstacle:
 				if (GameArea.frameNo == 1 || everyinterval(170)) {
 					x = GameArea.canvas.width;
 					minHeight = 20;
@@ -124,14 +129,16 @@
 					Obstacles.push(new component(40, x - height - gap, "red", x, height + gap));
 					score++;
 				}
+				// Speed of the Obstacles:
 				for (i = 0; i < Obstacles.length; i += 1) {
 					Obstacles[i].x += -2;
 					Obstacles[i].update();
 				}
-				myScore.text="OBSTACLES: " + score;
+				myScore.text="Time Score: " + score;
 				myScore.update();
 				GamePiece.speedX = 0;
 				GamePiece.speedY = 0;
+				// Speed of the Gamepiece:
 				if (GameArea.key && GameArea.key == 37) {GamePiece.speedX = -1; }
 				if (GameArea.key && GameArea.key == 39) {GamePiece.speedX = 1; }
 				if (GameArea.key && GameArea.key == 38) {GamePiece.speedY = -1; }
@@ -139,6 +146,7 @@
 				GamePiece.newPos();
 				GamePiece.update();
 			}
+			// Creating sounds effects:
 			function sound(src) {
 				this.sound = document.createElement("audio");
 				this.sound.src = src;
@@ -153,12 +161,12 @@
 					this.sound.pause();
 				}
 			}
-
+			// Interval of Obstacles here:
 			function everyinterval(n) {
 				if ((GameArea.frameNo / n) % 1 == 0) {return true;}
 				return false;
 			}
-		
+
 		</script>
 	</body>
 </html>

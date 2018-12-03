@@ -1,5 +1,5 @@
 # Blocks Away Game
-The Game is Flappy Bird inspired but theirs a difference,the Gamepiece(Blocks) don't have gravity.
+The Game is a Flappy Bird inspired but lots of difference. The Gamepiece(Blocks) don't have gravity.
 
 
 <b>The Game has 3 game option:</b> 
